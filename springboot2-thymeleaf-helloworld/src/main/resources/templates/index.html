@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>springboot-thymeleaf</title>
+	<meta charset="utf-8" />
+	<link rel="stylesheet" type="text/css" th:href="@{/assets/css/bootstrap.min.css}"/>
+	<link rel="stylesheet" type="text/css" th:href="@{/assets/css/main.css}"/>
+</head>
+<body>
+	<!-- Image and text -->
+	<nav class="navbar navbar-light bg-light">
+  		<a class="navbar-brand" href="#">
+    		<img alt="logo" th:src="@{/assets/images/spring_50x50.png}" width="30" height="30" class="d-inline-block align-top">
+    		Home
+  		</a>
+	</nav>
+	<header>
+		<!-- header -->
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-12" align="center">
+					<img alt="logo" th:src="@{/assets/images/logo.png}">
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- main -->
+	<div class="container-fluid" align="center">	<!-- main container -->
+		<h1 th:text="#{text.title}"></h1>
+		<p style="margin-top:100px;"><span th:text="${myModel.now}"></span>, <span th:text="${myModel.date}"></span></p>
+	</div> <!-- /main container -->
+	<footer>
+		<div class="container">
+        	<span th:text="#{text.footer}" class="text-muted">App footer</span>
+    	</div>
+	</footer>
+	
+	<!-- JS -->
+	<script type="text/javascript" src="@{/assets/js/bootstrap.min.js}"></script>
+	<script type="text/javascript" src="@{/assets/js/jquery.min.js}"></script>
+  	<script>
+		$(document).ready(function() {
+			// jquery code ...
+		});
+	</script>
+</body>
+</html>
